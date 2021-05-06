@@ -38,6 +38,7 @@ var pickr = new EmojiCompendium(document.querySelector("#compendium"), document.
 
 Specify your own colors by adding CSS custom properties:
 ```html
+<!--Warhol Picker -->
 :root {
   --compendium-outer-bg: yellow;
   --compendium-outer-text: blue;
