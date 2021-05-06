@@ -54,7 +54,7 @@ function EmojiCompendium(targetElement, inputElement, options) {
   categories.add("Unsupported")
   var emojis = emojiNames
   var DOUBLE_CLICK_TIMER
-  window.EmojiCompendium_COUNT = 0
+  window.EmojiCompendium_COUNT = window.EmojiCompendium_COUNT || 0
   var activeEl /*currently 'clicked' emoji cell*/
 
   /*create and attach the DOM to the target element*/
