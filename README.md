@@ -1,15 +1,48 @@
-# readme and demo coming soon
-An emoji picker and comprehensive desktop reference, all in one!
+# Emojis-Ultimate-Compendium
+## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbGm)
+### An Emoji picker and comprehensive desktop reference, all in one!
 
--> The world's most advanced Emoji Picker
--> A desktop reference for webmasters, artists, power users, or anyone who loves emojis. (who doesn't??) 
--> Web scraped from https://unicode.org/emoji/charts/full-emoji-list.html and https://unicode.org/emoji/charts-13.1/full-emoji-modifiers.html
+* Web scraped from https://unicode.org/emoji/charts/full-emoji-list.html and https://unicode.org/emoji/charts-13.1/full-emoji-modifiers.html for all the hottest Emojis (build script included)
+* On-the-fly Emoji metrics means you can Sort By Color, Saturation, Size, Brightness, and more
+* Smmary view available via double-click gives you all the juicy escape strings, color info, character block, categories, and more.
+* Search by name, category, and sub-category
+* Fullscreen and Mini modes
 
 **Usage**
 
+HTML should include the css and js files, plus an element to attach the picker to. The input element is optional, omit for a stand-alone compendium.
+```html
+<head><link rel="stylesheet" href="styles.css" /></head>
+<style>
+<!-- to override colors, add variables:
+:root {
+  --compendium-outer-bg: yellow;
+  --compendium-outer-text: blue;
+  --compendium-inner-bg: #3dfaff;
+  --compendium-inner-text: red;
+  --compendium-active-bg:#fc03fd;
+  --compendium-active-text: #70fc03;
+}-->
+</style>
+<input type="text" id="example"><span id="compendium">📙</span>
+
+<script src='https://gitcdn.link/repo/sweaver2112/Enhanced-Unicode-Character-Blocks/master/blocks.js'></script>
+<script src='emojiCompendium.js'></script>
+```
+JS:
 ```javascript
-    var pickr = new EmojiCompendium(document.querySelector("#compendium"), document.querySelector("#example"));
-    var pickr2 = new EmojiCompendium(document.querySelector("#compendium2"), document.querySelector("#example2"), { width: "220px", height: "350px", mode: "mini", category: "Animals & nature" })
+/*
+new EmojiCompendium(clickTarget, [inputTarget], [options])
+let defaults = { 
+ width: "300px", 
+ height: "400px", 
+ fontSize: "1em", 
+ mode: "default", //default or mini
+ category: "Smileys & emotion",
+ banner: "<span>📗&nbsp;Emojis: Ultimate Compendium&nbsp;📗</span>" 
+}
+*/
+var pickr = new EmojiCompendium(document.querySelector("#compendium"), document.querySelector("#example"));
 ```
 
-**DEMO**
+
