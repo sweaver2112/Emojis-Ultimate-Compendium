@@ -29,7 +29,7 @@ async function buildJSON() {
 
     let findCharacters = new RegExp("(?<=<td class='chars'>)(.*?)(?=</td>).*?(?<=<td class='name'>)(.*?)(?=</td>)", "gs")
     let characters = [];
-    console.log("sweaverD.com")
+
     while ((match = findCharacters.exec(htm)) != null) {
 
         let entry = {}
