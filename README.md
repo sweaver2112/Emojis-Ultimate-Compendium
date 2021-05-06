@@ -1,4 +1,4 @@
-# Emojis-Ultimate-Compendium
+# readme and demo coming soon
 An emoji picker and comprehensive desktop reference, all in one!
 
 -> The world's most advanced Emoji Picker
