@@ -1,21 +1,19 @@
 /*======================compendium scss==========================*/
 :root {
-  --main-trim: rgba(1, 1, 124, .8);
-  --accent: #efefef;
-  --active-fg: black;
-  --active-bg:#b4f5be;
-  --fg: #000000;
-  --bg: #fefefe;
-  --primaryOption: blue;
+  --compendium-outer-bg: rgba(1, 1, 124, .8);
+  --compendium-outer-text: #efefef;
+  --compendium-inner-bg: #fefefe;
+  --compendium-inner-text: #000000;
+  --compendium-active-bg:#b4f5be;
+  --compendium-active-text: black;
 }
 :root.dark {
-  --main-trim: #f9f8f6;
-  --accent: #2c2c12;
-  --active-fg: #f3f6e4;
-  --active-bg:rgba(20,20,20,.7);
-  --bg: rgba(0,0,0,1);
-  --fg: #f3f6e4;
-  --primaryOption: blue;
+  --compendium-outer-bg: #f9f8f6;
+  --compendium-outer-text: #2c2c12;
+  --compendium-inner-bg: rgba(0,0,0,1);
+  --compendium-inner-text: #f3f6e4;
+  --compendium-active-bg:rgba(20,20,20,.7);
+  --compendium-active-text: #f3f6e4;
 }
 
 body {
@@ -27,7 +25,7 @@ body {
 
 .emojiCompendium_icon:hover {
   cursor: pointer;
-  background-color: var(--active-bg);
+  background-color: var(--compendium-active-bg);
 }
 
 .emojiCompendium_container {
@@ -35,7 +33,7 @@ body {
   flex-direction: column;
   resize: both;
   z-index: 100;
-  outline: 1px solid var(--accent);
+  outline: 1px solid var(--compendium-outer-text);
   h1 {
     margin:5px;
   }
@@ -98,7 +96,7 @@ body {
     flex-direction: column;
 
     a.backButton {
-      color: var(--accent);
+      color: var(--compendium-outer-text);
     }
 
     &.chart {
@@ -124,8 +122,8 @@ body {
       .grid {
         
         .field:nth-child(2n + 2) {
-          background-color: var(--accent);
-          color:var(--main-trim);
+          background-color: var(--compendium-outer-text);
+          color:var(--compendium-outer-bg);
         }
         .key {
           font-size: 200%;
@@ -152,13 +150,13 @@ body {
       }
     }
     .header {
-      background: var(--main-trim);
-      color:var(--accent);
+      background: var(--compendium-outer-bg);
+      color:var(--compendium-outer-text);
     }
 
     .controls {
-      background: var(--main-trim);
-      color:var(--accent);
+      background: var(--compendium-outer-bg);
+      color:var(--compendium-outer-text);
       position: sticky;
       top: 0px;
       padding: 5px;
@@ -167,7 +165,7 @@ body {
       flex-wrap: wrap;
 
       .primaryCategory {
-        color: var(--primaryOption);
+        color: blue;
       }
     }
 
@@ -177,12 +175,12 @@ body {
 
     .grid {
       flex:1 1 auto;
-      background-color: var(--bg);
-      color: var(--fg);
+      background-color: var(--compendium-inner-bg);
+      color: var(--compendium-inner-text);
       overflow-y: hidden;
       .container.highlight {
-        background-color: var(--active-bg);
-        color:var(--active-fg);
+        background-color: var(--compendium-active-bg);
+        color:var(--compendium-active-text);
       }
       .coloredBox {
         display: inline-block;
@@ -192,7 +190,7 @@ body {
       .key {
         &:hover {
           cursor: pointer;
-          background-color: var(--active-bg);
+          background-color: var(--compendium-active-bg);
         }
       }
       .key {
@@ -211,8 +209,8 @@ body {
       justify-content: space-between;
       bottom: 0;
       padding: 10px;
-      background-color: var(--main-trim);
-      color: var(--accent);
+      background-color: var(--compendium-outer-bg);
+      color: var(--compendium-outer-text);
       .fullscreenButton {
         filter: brightness(300%);
       }

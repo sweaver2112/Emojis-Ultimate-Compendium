@@ -1,226 +1,186 @@
 /*======================compendium scss==========================*/
-    :root {
-      --main-trim: rgba(1, 1, 124, .8);
-      --accent: #efefef;
-      --active-fg: black;
-      --active-bg: #b4f5be;
-      --fg: #000000;
-      --bg: #fefefe;
-      --primaryOption: blue;
-    }
+:root {
+  --compendium-outer-bg: rgba(1, 1, 124, .8);
+  --compendium-outer-text: #efefef;
+  --compendium-inner-bg: #fefefe;
+  --compendium-inner-text: #000000;
+  --compendium-active-bg:#b4f5be;
+  --compendium-active-text: black;
+}
 
-    :root.dark {
-      --main-trim: #f9f8f6;
-      --accent: #2c2c12;
-      --active-fg: #f3f6e4;
-      --active-bg: rgba(20, 20, 20, .7);
-      --bg: rgba(0, 0, 0, 1);
-      --fg: #f3f6e4;
-      --primaryOption: blue;
-    }
+:root.dark {
+  --compendium-outer-bg: #f9f8f6;
+  --compendium-outer-text: #2c2c12;
+  --compendium-inner-bg: rgba(0,0,0,1);
+  --compendium-inner-text: #f3f6e4;
+  --compendium-active-bg:rgba(20,20,20,.7);
+  --compendium-active-text: #f3f6e4;
+}
 
-    body {
-      font-family: Lato, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-      padding: 50px;
-      text-align: center;
-    }
+body {
+  font-family: Lato, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  padding: 50px;
+  text-align: center;
+}
 
-    .emojiCompendium_icon:hover {
-      cursor: pointer;
-      background-color: var(--active-bg);
-    }
+.emojiCompendium_icon:hover {
+  cursor: pointer;
+  background-color: var(--compendium-active-bg);
+}
 
-    .emojiCompendium_container {
-      display: flex;
-      flex-direction: column;
-      resize: both;
-      z-index: 100;
-      outline: 1px solid var(--accent);
-    }
-
-    .emojiCompendium_container h1 {
-      margin: 5px;
-    }
-
-    .emojiCompendium_container.modal {
-      position: relative;
-    }
-
-    .emojiCompendium_container.modal .picker .controls .hideInModal {
-      display: none;
-    }
-
-    .emojiCompendium_container.modal .picker .controls div {
-      padding: 1px;
-    }
-
-    .emojiCompendium_container.modal .picker .grid {
-      min-height: 200px;
-    }
-
-    .emojiCompendium_container.modal .picker.verbose .container:not(.highlight) {
-      display: none;
-    }
-
-    .emojiCompendium_container.modal .picker.verbose .resultsCount {
-      display: none;
-    }
-
-    .emojiCompendium_container.modal .picker .header {
-      display: none;
-    }
-
-    .emojiCompendium_container.modal .picker .verboseContainer {
-      display: none;
-    }
-
-    .emojiCompendium_container.modal .picker #sortOrder {
-      display: none;
-    }
-
-    .emojiCompendium_container.modal .footer {
-      font-size: 80%;
-    }
-
-    .emojiCompendium_container.fullscreen .picker .controls div {
-      padding: 5px;
-    }
-
-    .emojiCompendium_container.fullscreen .picker .grid {
-      min-height: 100vh;
-    }
-
-    .emojiCompendium_container.fullscreen .picker .grid .key {
-      font-size: 120%;
-    }
-
-    .emojiCompendium_container .picker {
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .emojiCompendium_container .picker a.backButton {
-      color: var(--accent);
-    }
-
-    .emojiCompendium_container .picker.chart .grid .details-field {
-      display: none;
-    }
-
-    .emojiCompendium_container .picker.chart .grid div.container {
-      display: inline-block;
-      padding: 1px;
-      outline: none;
-    }
-
-    .emojiCompendium_container .picker.chart .backButton {
-      display: none;
-    }
-
-    .emojiCompendium_container .picker.verbose .grid .field:nth-child(2n+2) {
-      background-color: var(--accent);
-      color: var(--main-trim);
-    }
-
-    .emojiCompendium_container .picker.verbose .grid .key {
-      font-size: 200%;
-    }
-
-    .emojiCompendium_container .picker.verbose .grid .container {
-      padding: 5px;
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: min-content;
-      grid-gap: 2px;
-      place-items: center center;
-    }
-
-    .emojiCompendium_container .picker.mini .sortContainer {
-      display: none;
-    }
-
-    .emojiCompendium_container .picker.mini .fullscreenButton {
-      display: none;
-    }
-
-    .emojiCompendium_container .picker.mini .footer {
-      padding: 0px;
-    }
-
-    .emojiCompendium_container .picker .header {
-      background: var(--main-trim);
-      color: var(--accent);
-    }
-
-    .emojiCompendium_container .picker .controls {
-      background: var(--main-trim);
-      color: var(--accent);
-      position: sticky;
-      top: 0px;
-      padding: 5px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .emojiCompendium_container .picker .controls .primaryCategory {
-      color: var(--primaryOption);
-    }
-
-    .emojiCompendium_container .picker .filter {
-      width: 8em;
-    }
-
-    .emojiCompendium_container .picker .grid {
-      flex: 1 1 auto;
-      background-color: var(--bg);
-      color: var(--fg);
-      overflow-y: hidden;
-    }
-
-    .emojiCompendium_container .picker .grid .container.highlight {
-      background-color: var(--active-bg);
-      color: var(--active-fg);
-    }
-
-    .emojiCompendium_container .picker .grid .coloredBox {
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-    }
-
-    .emojiCompendium_container .picker .grid .key:hover {
-      cursor: pointer;
-      background-color: var(--active-bg);
-    }
-
-    .emojiCompendium_container .picker .grid .key {
-      margin: 5px;
-    }
-
-    .emojiCompendium_container .picker .grid .field {
-      padding: 2px;
-      align-items: center;
-    }
-
-    .emojiCompendium_container .picker .footer {
-      font-size: 90%;
-      position: sticky;
-      display: flex;
-      justify-content: space-between;
-      bottom: 0;
-      padding: 10px;
-      background-color: var(--main-trim);
-      color: var(--accent);
-    }
-
-    .emojiCompendium_container .picker .footer .fullscreenButton {
-      filter: brightness(300%);
-    }
-
-    @media screen and (max-width: 500px) {
-      .emojiCompendium_container .picker .footer {
-        font-size: 70%;
-      }
-    }S
+.emojiCompendium_container {
+  display: flex;
+  flex-direction: column;
+  resize: both;
+  z-index: 100;
+  outline: 1px solid var(--compendium-outer-text);
+}
+.emojiCompendium_container h1 {
+  margin: 5px;
+}
+.emojiCompendium_container.modal {
+  position: relative;
+}
+.emojiCompendium_container.modal .picker .controls .hideInModal {
+  display: none;
+}
+.emojiCompendium_container.modal .picker .controls div {
+  padding: 1px;
+}
+.emojiCompendium_container.modal .picker .grid {
+  min-height: 200px;
+}
+.emojiCompendium_container.modal .picker.verbose .container:not(.highlight) {
+  display: none;
+}
+.emojiCompendium_container.modal .picker.verbose .resultsCount {
+  display: none;
+}
+.emojiCompendium_container.modal .picker .header {
+  display: none;
+}
+.emojiCompendium_container.modal .picker .verboseContainer {
+  display: none;
+}
+.emojiCompendium_container.modal .picker #sortOrder {
+  display: none;
+}
+.emojiCompendium_container.modal .footer {
+  font-size: 80%;
+}
+.emojiCompendium_container.fullscreen .picker .controls div {
+  padding: 5px;
+}
+.emojiCompendium_container.fullscreen .picker .grid {
+  min-height: 100vh;
+}
+.emojiCompendium_container.fullscreen .picker .grid .key {
+  font-size: 120%;
+}
+.emojiCompendium_container .picker {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.emojiCompendium_container .picker a.backButton {
+  color: var(--compendium-outer-text);
+}
+.emojiCompendium_container .picker.chart .grid .details-field {
+  display: none;
+}
+.emojiCompendium_container .picker.chart .grid div.container {
+  display: inline-block;
+  padding: 1px;
+  outline: none;
+}
+.emojiCompendium_container .picker.chart .backButton {
+  display: none;
+}
+.emojiCompendium_container .picker.verbose .grid .field:nth-child(2n+2) {
+  background-color: var(--compendium-outer-text);
+  color: var(--compendium-outer-bg);
+}
+.emojiCompendium_container .picker.verbose .grid .key {
+  font-size: 200%;
+}
+.emojiCompendium_container .picker.verbose .grid .container {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: min-content;
+  grid-gap: 2px;
+  place-items: center center;
+}
+.emojiCompendium_container .picker.mini .sortContainer {
+  display: none;
+}
+.emojiCompendium_container .picker.mini .fullscreenButton {
+  display: none;
+}
+.emojiCompendium_container .picker.mini .footer {
+  padding: 0px;
+}
+.emojiCompendium_container .picker .header {
+  background: var(--compendium-outer-bg);
+  color: var(--compendium-outer-text);
+}
+.emojiCompendium_container .picker .controls {
+  background: var(--compendium-outer-bg);
+  color: var(--compendium-outer-text);
+  position: sticky;
+  top: 0px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.emojiCompendium_container .picker .controls .primaryCategory {
+  color: blue;
+}
+.emojiCompendium_container .picker .filter {
+  width: 8em;
+}
+.emojiCompendium_container .picker .grid {
+  flex: 1 1 auto;
+  background-color: var(--compendium-inner-bg);
+  color: var(--compendium-inner-text);
+  overflow-y: hidden;
+}
+.emojiCompendium_container .picker .grid .container.highlight {
+  background-color: var(--compendium-active-bg);
+  color: var(--compendium-active-text);
+}
+.emojiCompendium_container .picker .grid .coloredBox {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.emojiCompendium_container .picker .grid .key:hover {
+  cursor: pointer;
+  background-color: var(--compendium-active-bg);
+}
+.emojiCompendium_container .picker .grid .key {
+  margin: 5px;
+}
+.emojiCompendium_container .picker .grid .field {
+  padding: 2px;
+  align-items: center;
+}
+.emojiCompendium_container .picker .footer {
+  font-size: 90%;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  padding: 10px;
+  background-color: var(--compendium-outer-bg);
+  color: var(--compendium-outer-text);
+}
+.emojiCompendium_container .picker .footer .fullscreenButton {
+  filter: brightness(300%);
+}
+@media screen and (max-width: 500px) {
+  .emojiCompendium_container .picker .footer {
+    font-size: 70%;
+  }
+}

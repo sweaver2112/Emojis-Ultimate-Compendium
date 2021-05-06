@@ -7,32 +7,49 @@
   <title>📙 Emojis: Ultimate Compendium 📙</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
   <link rel="stylesheet" href="styles.css" />
 
 </head>
 <style>
-html.dark {
-  background-color: black;
+
+/*
+example of custom css styling for the compendium
+:root {
+  --compendium-outer-bg: yellow;
+  --compendium-outer-text: blue;
+  --compendium-inner-bg: #3dfaff;
+  --compendium-inner-text: red;
+  --compendium-active-bg:#fc03fd;
+  --compendium-active-text: #70fc03;
 }
-#candy {
-  border: 1px solid var(--accent);
-  border-radius: 5px;
-  display: inline-flex;
-  padding: 2px;
-  margin: 10px;
-}
-#candy #example {
-  background-color: var(--bg);
-  color: var(--fg);
-  border: none;
-}
-#candy #example:focus {
-  outline: none;
-}
-.github-fork-ribbon::before {
-  background-color: #f7630c;
-}
+*/
+  html.dark {
+    background-color: red;
+  }
+
+  #candy {
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    display: inline-flex;
+    padding: 2px;
+    margin: 10px;
+  }
+
+  #candy #example {
+    background-color: var(--bg);
+    color: var(--fg);
+    border: none;
+  }
+
+  #candy #example:focus {
+    outline: none;
+  }
+
+  .github-fork-ribbon::before {
+    background-color: #f7630c;
+  }
 </style>
 
 <body translate="no">
@@ -40,19 +57,21 @@ html.dark {
     onclick="document.querySelector('html').classList.toggle('dark'); (document.querySelector('html').classList.contains('dark'))?this.innerText='☀ Light Mode':this.innerText='🌒 Dark Mode';event.stopPropagation()">🌒
     Dark Mode</a><br />
 
-  <div id="candy"><input type="text" id="example" placeholder="Styled input, defaults"><span
-      id="compendium"><span>📙</span></span>
+  <div id="candy"><input type="text" id="example" placeholder="Styled input, defaults"><span id="compendium">📙</span>
   </div><br />
 
-  <div><input type="text" id="example2" placeholder="Plain input, mini-mode"><span
-      id="compendium2"><span>😀</span></span>
+  <div><input type="text" id="example2" placeholder="Plain input, mini-mode"><span id="compendium2">😀</span>
   </div>
 
-  <a class="github-fork-ribbon" href="https://url.to-your.repo" target="_blank" data-ribbon="🍴 me on GitHub"
-    title="Fork me on GitHub">Fork me on GitHub</a>
+  <a class="github-fork-ribbon" href="https://github.com/sweaver2112/Emojis-Ultimate-Compendium" target="_blank"
+    data-ribbon="🍴 me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 
   <script src='https://gitcdn.link/repo/sweaver2112/Enhanced-Unicode-Character-Blocks/master/blocks.js'></script>
   <script src='emojiCompendium.js'></script>
-  
+  <script>
+    var pickr = new EmojiCompendium(document.querySelector("#compendium"), document.querySelector("#example"));
+    var pickr2 = new EmojiCompendium(document.querySelector("#compendium2"), document.querySelector("#example2"), { width: "220px", height: "350px", mode: "mini", category: "Animals & nature" })
+  </script>
 </body>
+
 </html>
