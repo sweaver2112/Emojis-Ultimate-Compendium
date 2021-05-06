@@ -1,5 +1,5 @@
 # Emojis-Ultimate-Compendium
-## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbGm)
+## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG)
 ### An Emoji picker and comprehensive desktop reference, all in one!
 
 * Web scraped from https://unicode.org/emoji/charts/full-emoji-list.html and https://unicode.org/emoji/charts-13.1/full-emoji-modifiers.html for all the hottest Emojis (build script included)
