@@ -8,22 +8,12 @@
 * Search by name, category, and sub-category
 * Fullscreen and Mini modes
 
-**Usage**
+_Usage_
 
-HTML should include the css and js files, plus an element to attach the picker to. The input element is optional, omit for a stand-alone compendium.
+HTML: should include the css and js files, plus an element to attach the picker to. The input element is optional, omit for a stand-alone compendium.
 ```html
 <head><link rel="stylesheet" href="styles.css" /></head>
-<style>
-<!-- to override colors, add variables:
-:root {
-  --compendium-outer-bg: yellow;
-  --compendium-outer-text: blue;
-  --compendium-inner-bg: #3dfaff;
-  --compendium-inner-text: red;
-  --compendium-active-bg:#fc03fd;
-  --compendium-active-text: #70fc03;
-}-->
-</style>
+
 <input type="text" id="example"><span id="compendium">📙</span>
 
 <script src='https://gitcdn.link/repo/sweaver2112/Enhanced-Unicode-Character-Blocks/master/blocks.js'></script>
@@ -44,5 +34,19 @@ let defaults = {
 */
 var pickr = new EmojiCompendium(document.querySelector("#compendium"), document.querySelector("#example"));
 ```
+
+Specify your own colors by adding CSS custom properties:
+```html
+:root {
+  --compendium-outer-bg: yellow;
+  --compendium-outer-text: blue;
+  --compendium-inner-bg: #3dfaff;
+  --compendium-inner-text: red;
+  --compendium-active-bg:#fc03fd;
+  --compendium-active-text: #70fc03;
+}
+```
+
+
 
 
