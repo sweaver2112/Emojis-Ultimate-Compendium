@@ -1,10 +1,11 @@
 # Emojis-Ultimate-Compendium
 ## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG)
-### An Emoji picker and comprehensive desktop reference, all in one!
+### An Emoji picker and comprehensive desktop reference
 
+* Power tool for webmasters, developers, digital artists, and anyone who loves Emojis. 
 * Web scraped from https://unicode.org/emoji/charts/full-emoji-list.html and https://unicode.org/emoji/charts-13.1/full-emoji-modifiers.html for all the hottest Emojis (build script included)
 * On-the-fly Emoji metrics means you can Sort By Color, Saturation, Size, Brightness, and more
-* Smmary view available via double-click gives you all the juicy escape strings, color info, character block, categories, and more.
+* Smmary view available via double-click gives you all the juicy escape strings, color info, character block, categories, etc
 * Search by name, category, and sub-category
 * Fullscreen and Mini modes
 
