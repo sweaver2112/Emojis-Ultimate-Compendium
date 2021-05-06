@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>📙 Emojis: Ultimate Compendium 📙</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<style>
+html.dark {
+  background-color: black;
+}
+#candy {
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  display: inline-flex;
+  padding: 2px;
+  margin: 10px;
+}
+#candy #example {
+  background-color: var(--bg);
+  color: var(--fg);
+  border: none;
+}
+#candy #example:focus {
+  outline: none;
+}
+.github-fork-ribbon::before {
+  background-color: #f7630c;
+}
+</style>
+
+<body translate="no">
+  <a href="#" style="text-decoration:none;color:#f7630c;" title="dark mode"
+    onclick="document.querySelector('html').classList.toggle('dark'); (document.querySelector('html').classList.contains('dark'))?this.innerText='☀ Light Mode':this.innerText='🌒 Dark Mode';event.stopPropagation()">🌒
+    Dark Mode</a><br />
+
+  <div id="candy"><input type="text" id="example" placeholder="Styled input, defaults"><span
+      id="compendium"><span>📙</span></span>
+  </div><br />
+
+  <div><input type="text" id="example2" placeholder="Plain input, mini-mode"><span
+      id="compendium2"><span>😀</span></span>
+  </div>
+
+  <a class="github-fork-ribbon" href="https://url.to-your.repo" target="_blank" data-ribbon="🍴 me on GitHub"
+    title="Fork me on GitHub">Fork me on GitHub</a>
+
+  <script src='https://gitcdn.link/repo/sweaver2112/Enhanced-Unicode-Character-Blocks/master/blocks.js'></script>
+  <script src='emojiCompendium.js'></script>
+  
+</body>
+</html>

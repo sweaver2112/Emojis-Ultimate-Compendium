@@ -1,0 +1,228 @@
+/*======================compendium scss==========================*/
+:root {
+  --main-trim: rgba(1, 1, 124, .8);
+  --accent: #efefef;
+  --active-fg: black;
+  --active-bg:#b4f5be;
+  --fg: #000000;
+  --bg: #fefefe;
+  --primaryOption: blue;
+}
+:root.dark {
+  --main-trim: #f9f8f6;
+  --accent: #2c2c12;
+  --active-fg: #f3f6e4;
+  --active-bg:rgba(20,20,20,.7);
+  --bg: rgba(0,0,0,1);
+  --fg: #f3f6e4;
+  --primaryOption: blue;
+}
+
+body {
+  font-family: Lato, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji", sans-serif;
+  padding: 50px;
+  text-align:center;
+}
+
+.emojiCompendium_icon:hover {
+  cursor: pointer;
+  background-color: var(--active-bg);
+}
+
+.emojiCompendium_container {
+  display:flex;
+  flex-direction: column;
+  resize: both;
+  z-index: 100;
+  outline: 1px solid var(--accent);
+  h1 {
+    margin:5px;
+  }
+  &.modal {
+    position: relative;  
+    .picker {
+      .controls {
+        .hideInModal {
+          display:none;
+        }
+        div {
+          padding: 1px;
+        }
+      } 
+      .grid {
+        min-height:200px;
+      }
+      &.verbose {
+        .container:not(.highlight) {
+          display: none;
+        }      
+      .resultsCount {
+          display: none;
+        }
+      }
+      .header {
+        display: none;
+      }
+      .verboseContainer {
+        display: none;
+      }
+      #sortOrder {
+        display: none;
+      }
+    }
+    .footer {
+      font-size: 80%;
+    }
+  }
+
+  &.fullscreen {  
+    .picker {
+      .controls {
+        div {
+          padding: 5px;
+        }
+      }
+      .grid {
+        min-height:100vh;
+        .key {
+          font-size:120%;
+        }
+      }
+    } 
+  }
+
+  .picker {
+    flex:1 1 auto;
+    display:flex;
+    flex-direction: column;
+
+    a.backButton {
+      color: var(--accent);
+    }
+
+    &.chart {
+      .grid {
+        .key {
+          
+        }
+        .details-field {
+          display: none;
+        }
+        div.container {
+          display: inline-block;
+          padding: 1px;
+          outline: none;
+        }
+      }
+      .backButton {
+        display: none;
+      }
+    }
+
+    &.verbose {
+      .grid {
+        
+        .field:nth-child(2n + 2) {
+          background-color: var(--accent);
+          color:var(--main-trim);
+        }
+        .key {
+          font-size: 200%;
+        }
+        .container {
+          padding: 5px;
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: min-content;
+          grid-gap: 2px;
+          place-items: center center;
+        }
+      }
+    }
+    &.mini {
+      .sortContainer {
+        display:none;
+      }
+      .fullscreenButton {
+        display:none;
+      }
+      .footer {
+        padding:0px;
+      }
+    }
+    .header {
+      background: var(--main-trim);
+      color:var(--accent);
+    }
+
+    .controls {
+      background: var(--main-trim);
+      color:var(--accent);
+      position: sticky;
+      top: 0px;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .primaryCategory {
+        color: var(--primaryOption);
+      }
+    }
+
+    .filter {
+      width: 8em;
+    }
+
+    .grid {
+      flex:1 1 auto;
+      background-color: var(--bg);
+      color: var(--fg);
+      overflow-y: hidden;
+      .container.highlight {
+        background-color: var(--active-bg);
+        color:var(--active-fg);
+      }
+      .coloredBox {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+      }
+      .key {
+        &:hover {
+          cursor: pointer;
+          background-color: var(--active-bg);
+        }
+      }
+      .key {
+        margin: 5px;
+      }
+      .field {
+        padding:2px;
+        align-items: center;
+      }
+    }
+
+    .footer {
+      font-size:90%;
+      position: sticky;
+      display: flex;
+      justify-content: space-between;
+      bottom: 0;
+      padding: 10px;
+      background-color: var(--main-trim);
+      color: var(--accent);
+      .fullscreenButton {
+        filter: brightness(300%);
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .picker .footer {
+      font-size:70%;
+    }
+  }
+
+}
