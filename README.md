@@ -1,5 +1,5 @@
 # Emojis-Ultimate-Compendium
-## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG)
+## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG) (not tested on Apple, google Chrome on Android freezes/hangs while Firefox on Android is ok)
 ### An Emoji picker and comprehensive desktop reference
 
 * Power tool for webmasters, developers, digital artists, and anyone who loves Emojis. 
