@@ -1,9 +1,12 @@
 # Emojis-Ultimate-Compendium
+
+![image showing modal dialog of Emoji Compendium](https://github.com/sweaver2112/Emojis-Ultimate-Compendium/blob/demo1.jpg?raw=true)
+
 ## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG) 
 ### An Emoji picker and comprehensive desktop reference
 
-* **Tested on Windows desktop.  Not tested on Apple IOS/Safari. GChrome on Android freezes/hangs (reason unknown) while Firefox on Android is ok. 
-* Power tool for webmasters, developers, digital artists, and anyone who loves Emojis. 
+* **Tested on Windows desktop and Android mobile.  Not tested on Apple IOS/Safari. GChrome on Android freezes/hangs (reasons unknown) while Firefox on Android is ok. 
+* The Power Tool for webmasters, developers, digital artists, and anyone who loves Emojis. 
 * Web scraped from https://unicode.org/emoji/charts/full-emoji-list.html and https://unicode.org/emoji/charts-13.1/full-emoji-modifiers.html for all the hottest Emojis (build script included)
 * On-the-fly Emoji metrics means you can Sort By Color, Saturation, Size, Brightness, and more
 * Summary view available via double-click gives you ALL the juicy deets: name, average color, escape strings, character block, etc.
