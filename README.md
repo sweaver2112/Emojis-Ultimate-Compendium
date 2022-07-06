@@ -1,8 +1,11 @@
 # Emojis-Ultimate-Compendium
 
-![image showing modal dialog of Emoji Compendium](https://github.com/sweaver2112/Emojis-Ultimate-Compendium/blob/demo1.jpg?raw=true)
+## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG)  
 
-## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG) 
+![image showing modal dialog of the Ultimate Emoji Compendium](https://github.com/sweaver2112/Emojis-Ultimate-Compendium/blob/main/demo2.png?raw=true)![image showing modal dialog of the Ultimate Emoji Compendium](https://github.com/sweaver2112/Emojis-Ultimate-Compendium/blob/main/demo3.png?raw=true)
+![image showing fullscreen mode of the Ultimate Emoji Compendium](https://github.com/sweaver2112/Emojis-Ultimate-Compendium/blob/main/demo1.png?raw=true)
+
+
 ### An Emoji picker and comprehensive desktop reference
 
 * **Tested on Windows desktop and Android mobile.  Not tested on Apple IOS/Safari. GChrome on Android freezes/hangs (reasons unknown) while Firefox on Android is ok. 
