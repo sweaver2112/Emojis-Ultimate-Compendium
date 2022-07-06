@@ -1,7 +1,8 @@
 # Emojis-Ultimate-Compendium
-## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG) (not tested on Apple, google Chrome on Android freezes/hangs while Firefox on Android is ok)
+## [DEMO](https://codepen.io/sweaver2112/full/QWKNRbG) 
 ### An Emoji picker and comprehensive desktop reference
 
+* Tested on Windows desktop.  Not tested on Apple IOS/Safari. GChrome on Android freezes/hangs (reason unknown) while Firefox on Android is ok. 
 * Power tool for webmasters, developers, digital artists, and anyone who loves Emojis. 
 * Web scraped from https://unicode.org/emoji/charts/full-emoji-list.html and https://unicode.org/emoji/charts-13.1/full-emoji-modifiers.html for all the hottest Emojis (build script included)
 * On-the-fly Emoji metrics means you can Sort By Color, Saturation, Size, Brightness, and more
